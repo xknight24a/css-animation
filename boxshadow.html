@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow effect</title>
+    <style>
+          *{
+
+              margin:0;
+              padding:0;
+              box-shadow: border-box;
+              font-family: sans-serif;
+
+          }
+          body{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              min-height: 100vh;
+              background: red;
+          }
+          .container{
+              position: relative;
+              width:900px;
+              display:flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+          }
+          .container h2{
+              font-size: 5em;
+              line-height: 1em;
+              padding: 5px 20px;
+          }
+          .container h2.text1{
+                     color:#fff;
+                     border-radius: 20px;
+                     box-shadow: -3px -3px 2px rgba(255,255,255,0.3),
+                                  5px 5px 5px rgba(0,0,0,0.2),
+                                  15px 15px 15px rgba(0,0,0,0.2);
+          }
+          .container h2 .text2 
+          {
+              color: #6e18f3;
+              padding: 40px;
+              filter: drop-shadow( -3px -3px 2px rgba(255,255,255,0.3));
+          }
+    </style>
+</head>
+<body>
+   <div class="container">
+       <h2 class="text1">Box shadow</h2>
+       <h2 class="text2">Filter Drop Shadow</h2>
+   </div>
+</body>
+</html>
