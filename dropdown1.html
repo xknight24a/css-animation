@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Down Menu</title>
+    <style>
+        *
+        {
+            margin:0;
+            padding: 0 ;
+        }
+       body
+       {
+           background-color: blanchedalmond;
+           margin-left: 250px;
+           margin-top: 20px;
+       }
+       #container ul li
+       {
+           background-color: transparent;
+           width: 150px;
+           border: 1px solid white;
+           height: 50px;
+           line-height: 50px;
+           text-align: center;
+           border-radius: 26px;
+           float: left;
+           color:black;
+           font-size: 19px;
+           position: relative;
+       }
+       #container ul 
+       {
+           list-style: none;
+       }
+       #container ul li:hover
+       {
+          background-color: #85C1E9;
+       }
+       #container ul ul {
+           display: none;
+       }
+       #container ul li:hover >ul
+       {
+           display: block;
+       }
+       #container ul ul ul 
+       {
+           margin-left: 150px;
+           top:0;
+           position: absolute;
+       }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Services
+                <ul>
+                    <li>Web Design</li>
+                    <li>Mobile Design
+                         <ul>
+                             <li>ios App</li>
+                             <li>Android App</li>
+                             <li>Windows</li>
+                         </ul>
+                    </li>
+                    <li>Advertisement</li>
+                </ul>
+            </li>
+            <li>Blog</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+<script></script>    
+</body>
+</html>
