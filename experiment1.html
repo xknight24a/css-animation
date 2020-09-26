@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wave circle</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            background: #000;
+        }
+        .circle{
+            width:100%;
+            height:100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .c1
+        {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            width:100px;
+            height:100px;
+            border:12px solid green;
+            border-radius: 50%;
+            justify-content: center;
+            animation: anmc 4s linear infinite;
+            align-items: center;
+        }
+        .c1::before
+        {
+            content: '';
+            position: absolute;
+            /* background-color: red; */
+            width:180%;
+            height:180%;
+            border-radius: 50%;
+            top:-50%;
+            left:-50%;
+            border: 10px solid grey;
+            justify-content: center;
+            align-items: center;
+            animation: anmc 4s linear infinite;
+
+        }
+        .c1::after
+        {
+            content: '';
+            position: absolute;
+            /* background-color: red; */
+            width:100%;
+            height:100%;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+            top:-50%;
+            left:-50%;
+            border: 10px solid blue;
+            justify-content: center; 
+            animation: anmc 4s linear infinite;
+        }
+        @keyframes anmc 
+        {
+            0%
+            {
+                width:0px;
+                height:0px;
+                opacity: 1;
+            }
+            50%
+            {
+                opacity: 0.5;
+            }
+            100%
+            {
+                width:200px;
+                opacity: 0;
+                height:200px  
+            }
+        }
+        .c2
+        {
+            position: absolute;
+             top:30%;
+            left:10%; 
+            /* transform: translate(-50%,-50%); */
+            width:100px;
+            height:100px;
+            background-color: thistle;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            justify-content: center;
+         /*   animation: anmc 4s linear infinite;
+           */ align-items: center; 
+        }
+        .c2::before
+        {
+            content: '';
+            position: absolute;
+            /* background-color: red; */
+            width:100px;
+            height:30px;
+            transform: perspective(200px);
+            top:-16%;
+            background-color: orangered;
+            border-radius: 50%;      
+            justify-content: center;
+            align-items: center;
+        }
+        .c2::after
+        {
+            content: '';
+            position: absolute;
+            /* background-color: red; */
+            width:65px;
+            height:40px;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+            top:50%;
+            left:83%;
+            border: 8px solid thistle;
+            justify-content: center; 
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="circle">
+        <div class="c1"></div>
+        <div class="c2"></div>
+        <div class="ball"></div>
+        <div class="snow"></div>
+    </div>
+</body>
+</html>
