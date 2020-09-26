@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu bar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #272727;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh
+        }
+        .menu_bt-n
+        {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 80px;
+            cursor:pointer;
+            transition: all 0.5s ease-in-out;
+            border: 3px solid #fff;
+
+        }
+        .menu_bt-n_burger
+        {
+            width: 50px;
+            height: 6px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(255,101,47,0.3)
+        }
+        .menu_bt-n_burger::before,
+        .menu_bt-n_burger::after
+        {
+           content:"";
+           position: absolute;
+           width:50px;
+           height:6px;
+           background-color: #fff;
+           border-radius: 5px;
+           box-shadow: 0 2px 5px rgba(255,101,47,0.2);
+           transition: all 0.5s ease-in-out;
+        }
+        .menu_bt-n_burger::before
+        {
+            transform: translateY(-16px);
+        }
+        .menu_bt-n_burger::after
+        {
+            transform: translateY(16px);
+        }
+        
+        
+        /* Animation */
+  .menu_bt-n.open  .menu_bt-n_burger
+        {
+            transform: translateX(-52px);
+            background-color: transparent;
+            box-shadow: none;
+        }
+        .menu_bt-n.open .menu_bt-n_burger::before
+        {
+            transform: rotate(45deg) translate(35px,-35px);
+        }
+        .menu_bt-n.open .menu_bt-n_burger::after
+        {
+            transform: rotate(-45deg) translate(35px,35px);
+        }
+
+        .menu_bt-n.open
+         {
+             border-radius: 50%;
+             background: linear-gradient(to left,red,green,white);
+             
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="menu_bt-n">
+        <div class="menu_bt-n_burger">
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+        const meNuBtn = document.querySelector('.menu_bt-n');
+        let meNuOpen = false;
+        meNuBtn.addEventListener('click',()=>{
+            if(!meNuOpen){
+                meNuBtn.classList.add('open');
+                meNuOpen = true;
+            } else {
+                meNuBtn.classList.remove('open');
+                meNuOpen = false;
+            }
+        });
+
+
+
+
+    </script>
+</body>
+</html>

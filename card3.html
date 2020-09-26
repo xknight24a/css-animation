@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+         /* Font */
+  @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+  
+  /* Design */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  html {
+    background-color: #ecf9ff;
+  }
+  
+  body {
+    color: #272727;
+    font-family: 'Quicksand', serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    /* padding: 1rem; */
+    margin: 2px;
+  }
+  
+  .main{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+      font-size: 24px;
+      font-weight: 400;
+      text-align: center;
+  }
+  
+  img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+  
+  .btn {
+    color: #ffffff;
+    padding: 0.6rem;
+    font-size: 0.51rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 600;
+    display: inline-block;
+    width: 45%;
+    cursor: pointer;
+    text-shadow: 0px 0px 4px #350bf5;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    box-shadow: 2px 1px 1px 1px rgb(146, 120, 120);
+  }
+  
+  .btn:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+  }
+  
+  .cards_item {
+    display: flex;
+    padding: 1rem;
+  }
+  
+  @media (min-width: 40rem) {
+    .cards_item {
+      width: 50%;
+    }
+  }
+  
+  @media (min-width: 56rem) {
+    .cards_item {
+      width: 25%;
+    }
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .card_content {
+    padding: 1rem;
+    background: linear-gradient(to bottom left, #800080 40%, #FFC39E 100%);
+  }
+  
+  .card_title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0px;
+  }
+  
+  .card_text {
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;    
+    font-weight: 400;
+    white-space: wrap;
+  }
+ .card_content .date_one
+        {
+            color:rgb(138, 129, 132);
+            font-size: 13px;
+        }
+
+        /* flex-direction, flex-wrap, flex-basis, flex-shrink and flex-grow. */
+        .conu
+        {
+            background:#D1F2EB;
+            display: flex;
+            flex-wrap: wrap;
+            /* flex-direction: row; */
+            /* flex-basis: content; */
+            border: 2px solid red;
+            
+        }
+        .corne_cont
+        {
+            width:25%;
+            margin-top: 1rem;
+            margin-left: 1rem;
+            height:auto;
+            margin-right: 10px;
+
+        }
+        .corne_o
+        {
+            width:25%;
+            position: fixed;
+            height:500px;
+            border-radius: 5px;
+            color: white;
+            background-color: chartreuse;
+            border: 2px solid rgb(236, 175, 7); 
+        }
+        .corna
+        {
+           display: flexbox;
+           width:70%;
+        }
+        @media only screen and (max-width: 990px) {
+  .corna {
+    width: 92%;
+  }
+}
+        .corn_rgt
+        {
+            width:100%;
+            border: 2px solid rgb(7, 236, 102);
+            height:50px;
+            margin: 1rem;
+        border-radius: 5px;
+            color: white;
+            background-color:black;
+        }
+       
+        .con_cade
+        {
+            width:100%;
+        border-radius: 5px;
+            border: 2px solid rgb(7, 236, 102);
+            margin: 1rem;
+            height:auto;
+        }
+        .corn_rgt 
+       {
+         display: flex;
+        padding: 10px;
+        border-radius: 5px;
+       }
+      .corn_on
+      {
+        width:90%;
+      
+      } 
+      /* .corn_tw
+      {
+      pass
+      } */
+      .nm_c
+      {
+        color: #ffffff;
+    padding: 0.35rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    box-shadow: 2px 1px 1px 1px rgb(146, 120, 120);
+      }
+      .nm_c:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+
+                
+  }
+ 
+    </style>
+</head>
+<body>
+  
+    <div class="conu">
+        <div class="corne_cont d-none d-lg-block">
+            <div class="corne_o"><h1> side by side</h1>
+            <h1>Manage my network</h1>
+            <ul>
+         
+            <li>    <a href="#">Connection</a> </li>
+              <li> <a href="#">Contact</a></li>
+              <li><a href="#">People I Follow</a></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+           
+            
+            </div>
+        </div>    
+    <div class="corna">
+        <div class="corn_rgt">
+            <div class="corn_on"> No pending invitations</div>
+              <div class="corn_tw"><button class="nm_c">Manage</button> </div>
+            </ul>
+        </div>
+        <div class="con_cade"> 
+            <div class="main">
+                <h1>Responsive Card Grid Layout</h1>
+                <ul class="cards">
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=5"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=11"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=14"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=17"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=2"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=5"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=11"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=14"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=17"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=2"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=5"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=11"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=14"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=17"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=2"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=5"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=11"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=14"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=17"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=2"></div>
+                      <div class="card_content">
+                        <span class="date_one">4 days ago</span>
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn ">Accept</button>
+                        <button class="btn card_btn ">Refuse</button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+        </div>
+    </div></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

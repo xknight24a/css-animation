@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dgdb</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: 0;
+        }
+        body
+        {
+            margin: 1rem;
+        }
+
+        /* total screen 100% */
+        .tm
+        {
+            background: #000;
+            width:100%;
+            height: auto;
+            display: flex;
+        }
+
+        /* for 75% display improvement */
+        .tpma
+        {
+            background-color: cadetblue;
+            width: 75%;
+            height: 1000px;
+        }
+
+        /* for dp display width 70% and height 500px */
+         
+        .in_pgb
+        {
+            background-color: powderblue;
+            width:100%;
+            height: 400px;
+            display: flex;
+            margin-top:auto;
+        }
+        .f_tk
+        {
+            width:100%;
+            z-index: 1;
+            border-radius: 15px;
+        }
+
+        /* for indc image in circle  width 30% */
+        .indca
+        {
+            width: 70%;
+            top: 320px;
+            left: 2%;
+            z-index: 1; 
+            position: absolute;
+
+   
+        }
+        .ind
+        {
+            background-color: darkkhaki;
+            width:150px;
+            height: 150px;
+            border-radius: 50%;
+            position: relative;
+            border: 3px solid white;
+        }
+        .ind img
+        {
+            
+            width:150px;
+            height: 150px;
+            position: relative;
+            border-radius: 50%;
+            
+           
+           
+        } 
+
+        /* Button space 70%  in dp */
+        /* .bnt_ad
+        {
+            width:70%
+
+        } */
+        .bnt_ad
+        {
+          position: relative;
+          float: right;
+          margin: 0;
+
+          margin-top:-6.3rem;
+
+
+        }
+        .bnt_ad button
+        {
+            width:130px;
+            height: 45px;
+            font-size: 18px;
+            margin: 10px;
+            border-radius: 5px;
+          border: 3px solid rgb(195, 226, 17);
+
+        }
+        .bnt_ad button:hover
+        {
+            background-color: plum;
+        }
+        /* nav for timeline or etc.. */
+
+       .tm
+       {
+           margin-top: 65px;
+           width:100%;
+           height: 55px;
+         
+       }
+       .tmi
+       {
+        justify-content: center;
+        align-items: center;
+           border: 3px solid white;
+       }
+   .tm ul 
+   {
+       width:100%;
+       justify-content: center;
+          align-items: center;
+          list-style-type: none;
+          
+   }
+     ul.tmi li
+        {
+          float: left;
+          text-align: center;
+          margin-top: 15px;
+           margin-left:3%;
+          position: relative;
+          color: white;
+          font-size: medium ;
+          text-decoration: none;
+          align-items: center;
+          font-family: sans-serif;
+
+        }
+        ul.tmi li:hover
+        {
+            border-bottom: 4px solid grey;
+            color:lawngreen;
+        }
+        ul.tmi li a.active:hover
+        {
+            border-bottom: 4px solid rgb(4, 25, 119);
+            color: magenta;
+        }
+       /* button in li   */
+       .tmas
+       {
+           margin-top: -5px;
+           font-size: 18px;
+           padding: 2px;
+           border-radius: 8px;
+           border: 2px solid gray;
+       }
+       ul.tmi li button:hover
+       {
+           background-color: rgb(7, 253, 151);
+           border-bottom:none;
+       }
+        /* for horizontal line which class name is horilin ..*/
+        hr.horilin
+        {
+            
+            border: 1px solid red;
+            margin:15px
+
+        }
+    /* below the time line or more */
+        .intos
+        {
+          width: 100%;
+          display: flex;
+        }
+        .spadss_pro
+        {
+            width:92%;
+          margin-left: 6.66%;
+
+        }
+        .intola_a
+        {
+          position: relative;
+          width: 100%;
+          height: auto;
+          background-color: hotpink;
+          justify-content: center;
+          align-items: center;
+          border-radius: 8px;
+          border: 3px solid gray;
+          margin-top: 5px;
+        }
+        .intola_a h1
+        {
+            margin: 5px;
+        }
+        .intola_a button.intos_bt
+        {
+        width: 95%;
+        margin: 2.5%;
+        border-radius: 15px;
+        border: 3px solid lightgray;
+        height: 40px;
+        font-size: 15px;
+        font-weight: 100;
+        }
+        .intola_a button:hover
+        {
+            background-color: lightgreen;
+        }
+     
+ /* search box */
+ input[type=text] {
+  width: 120px;
+  height: 35px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+
+.pro_file
+{
+    display: flex;
+    padding:10px
+}
+.pro_file h1
+{
+    margin-right: 30%;
+}
+.pro_file form
+{
+    margin-right: 5%;
+}
+.pro_file button
+{
+    margin-left: 5%;
+    height: 30px;
+    min-width: 58px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+/* friend list one by one */
+.frd_startw
+{
+    display: flex;
+}
+.frd_list
+{
+    display: flex;
+    width:48%;
+    border: 5px solid grey;
+    margin:5px;
+    font-family: sans-serif;
+}
+.frd_list
+ .frd_img_set
+{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 10px;
+    transition: 0.6s;
+}
+.frd_list
+.frd_img_set img
+{
+    width:100%;
+    border-radius: 15px;
+    box-shadow: 5px 2px 8px red;
+}
+.frd_img_set:hover
+{
+  width:300px;
+  height: 300px;
+  position:absolute;
+
+
+}
+.frd_list h3
+{
+  margin-top: 40px;
+  margin-left: 10px;
+}
+.frd_list h3 span
+{
+    display: inline;
+    font-size: 13px;
+    font-weight: 100;
+    color: rgb(48, 20, 20);
+}
+
+.frd_list button
+{
+    margin-left: 5%;
+    height: 30px;
+    min-width: 58px;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+        .ckns li 
+        {
+            margin: 18px;
+          font-size: 17px;
+        }
+        /* for 25% display improvement */
+        .tpma_t
+        {
+            width: 25%;
+            height: 1000px;
+            background-color: darkgray;
+        }
+    </style>
+</head>
+<body>
+    <div class="tm">
+        <!-- width length 70% -->
+        <div class="tpma">
+            <!-- for bg image and display for dp width: 70% and height 500px -->
+            <div class="in_pgb">
+             <img src="img1/ba5.jpg" class="f_tk" alt="">
+            
+             
+                <!-- div for image  and button   -->
+                 <div class="indca"> 
+
+                    <!-- image circle 40% -->
+
+                     <div class="ind">
+                       <img src="img1/er.shubaham.jpg" class="indc" alt="">
+                     </div> 
+  
+                <!-- for button active or default  -->
+                 <div class="bnt_ad"> 
+                    <button >Delete sov</button>
+                    <button >Active</button>
+                  
+                 </div> 
+                 <!-- name heading -->
+                      <h1 >Shubham + Amit</h1>
+                      <hr class="horilin">
+                </div>
+            </div>
+   
+            <!-- end the profile dp -->
+
+              <!-- timeline or more.... -->
+
+          <div class="tm">
+             <ul class="tmi">
+                 <li> <a href="#" class="active tmie">  Timeline </a> </li>
+                 <li> <a href="#" class=" tmie">About</a>   </li>
+                 <li> <a href="#" class=" tmie"> Friend  </a></li>
+                 <li> <a href="#" class=" tmie"> Photos</a>  </li>
+                 <li> <a href="#" class=" tmie"> Archive </a> </li>
+                 <li> <a href="#" class=" tmie">More...</a>  </li>
+                 <li><button class="tmas" >Edit Profile</button></li>
+                 <li><button class="tmas">edi</button></li>
+                 <li><button class="tmas">edi</button></li>
+
+
+             </ul>
+            </div> 
+
+            <!-- something new happen -->
+
+            <div class="intos">
+                <div class="spadss_pro">
+                <div class="intola_a">
+                    <div class="pro_file">
+                    <h1>Friends</h1>
+                    <form>
+                        <input type="text" name="search" placeholder="Search..">
+                      </form>
+                      <button class="tmas">Friend Request</button>
+                      <button class="tmas">Find Friend</button>
+                      </div>
+                    <div class="tm">
+                        <ul class="tmi">
+                            <li> <a href="#" class="active tmie">  Timeline </a> </li>
+                            <li> <a href="#" class=" tmie">About</a>   </li>
+                            <li> <a href="#" class=" tmie"> Friend  </a></li>
+                            <li> <a href="#" class=" tmie"> Photos</a>  </li>
+                            <li> <a href="#" class=" tmie"> Archive </a> </li>
+                            <li> <a href="#" class=" tmie">More...</a>  </li>
+                            <li><button class="tmas" >Edit Profile</button></li>
+                            <li><button class="tmas">edi</button></li>
+                            <li><button class="tmas">edi</button></li>
+           
+           
+                        </ul>
+                       </div> 
+                     <div class="frd_startw">
+                       <div class="frd_list">
+                           <div class="frd_img_set">
+                           <img src="img1/ba3.jpg" alt="">
+                           </div>
+                           <h3>Govind Kushawaha  <br><span>44 mutual friend</span> </h3>
+                           <button class="tmas">Friends</button>
+                       </div>
+                       <div class="frd_list">
+                        <div class="frd_img_set">
+                        <img src="img1/ba2.jpg" alt="">
+                        </div>
+                        <h3>Amit Kushawaha  <br><span>55 mutual friend</span> </h3>
+                        <button class="tmas">Friends</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+              
+                
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <!-- end 1 st one -->
+
+        <!-- width length 30% -->
+        <div class="tpma_t">
+
+        </div>
+
+        <!-- end 2nd one -->
+    </div>
+</body>
+</html>
