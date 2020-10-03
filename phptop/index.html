@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .cal{
+            width: 500px;
+            height:400px;
+            padding:20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(51, 90, 80);
+
+        }
+        h1{
+            color:crimson;
+             text-align: center;
+             box-shadow: 0 0 5px 6px grey;
+             padding: 10px;
+             margin-bottom: 20px;
+        }
+         input[type="number"]{
+             width: 250px;
+             height:40px;
+             margin:20px;
+             background-color: rgb(7, 243, 243);
+             /* box-shadow: 0 0 8px  yellow, 1px 1px 8px yellowgreen; */
+             font-size: 20px;
+             border-radius: 8px;
+             
+
+         }
+         label{
+             font-weight: 600;
+             font-family:Verdana, Geneva, Tahoma, sans-serif;
+         }
+
+         .demo{
+             text-align: center;
+             margin-top: 60px;
+             font-size: 30px;
+
+         }
+        select{
+           position: relative;
+           bottom:20%;
+           left: 38%;
+           width:200px;
+           height: 40px;
+           border-radius: 10px;
+           background-color: gray;
+           box-shadow: 0 0 8px rgb(224, 214, 214);
+           color:rgb(13, 96, 252);
+           font-size: 30px;
+        }
+       #opr{
+           text-align: center;
+       }
+    </style>
+</head>
+<body>
+    <div class="cal">
+         <h1>Tu to itna gaya</h1>
+        <label for="art">Enter value 1:</label> 
+         <input type="number" name="art" >
+         <br>
+         <label for="at">Enter value 2:</label> 
+            
+         <input type="number" name="at">
+         <br>
+         <select name="operat" id="opr">
+             <option value="add">+</option>
+             <option value="add">-</option>
+             <option value="add">*</option>
+             <option value="add">+</option>
+             <option value="add">%</option>
+         </select>
+          <p class="demo">top</p>
+        </div>
+</body>
+</html>
